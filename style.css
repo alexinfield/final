@@ -1,0 +1,335 @@
+/* Global Styles */
+@font-face {
+    font-family: 'New York Medium';
+    src: url('path-to-your-font/NewYorkMedium.woff2') format('woff2');
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: white;
+}
+
+/* Header & Navigation */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: black;
+    /* header spans full width */
+}
+.main-nav {
+    padding: 0 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    color: white;
+    font-size: 28.25px;
+    font-family: 'New York Medium', serif;
+    font-weight: 600;
+    line-height: 32px;
+}
+.logo a {
+    color: white;
+    text-decoration: none;
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+.nav-item {
+    border-bottom: 2px solid black;
+    color: #D3D3D3;
+    font-family: 'SF Mono', monospace;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 16px;
+    letter-spacing: 0.32px;
+}
+.nav-item[href*="blog"] {
+    width: 119.36px;
+    padding: 19px 39.67px 21px;
+    font-size: 15.50px;
+    font-weight: 700;
+}
+.nav-item[href*="philanthropy"] {
+    width: 187.80px;
+    padding: 19px 35.89px 21px;
+    font-size: 15.12px;
+    font-weight: 400;
+}
+.nav-item[href*="about"] {
+    width: 111.17px;
+    padding: 19px 32.08px 21px;
+    font-size: 14.62px;
+    font-weight: 400;
+}
+
+/* Hero Section */
+.hero-section {
+    width: 100%;
+    position: relative;
+    background: none;
+}
+.hero-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Card Styles */
+.content-card {
+    position: absolute;
+    top: calc(100% - 282px - 20px);
+    left: 20px;
+    width: 381px;
+    height: 282px;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 2;
+}
+.hero-section .content-card {
+    left: 20%;
+    width: 381px;
+}
+.card-tag {
+    color: black;
+    font-size: 12px;
+    font-family: 'SF Mono', monospace;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 15px;
+    letter-spacing: 0.60px;
+    margin-bottom: 10px;
+}
+.card-title {
+    color: black;
+    font-size: 28.25px;
+    font-family: 'New York Medium', serif;
+    font-weight: 600;
+    line-height: 32px;
+    margin-bottom: 20px;
+}
+.card-description {
+    color: #313439;
+    font-size: 11.88px;
+    font-family: 'SF Mono', monospace;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+/* Grid Layout */
+.grid-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    width: 60%;
+    margin: 50px auto; /* added top/bottom margin */
+}
+.grid-card {
+    margin: 0;         /* reset margins to let gap work */
+    width: 100%;
+    height: 504px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background-clip: padding-box;
+}
+.grid-card img {
+    width: 100%;
+    height: 504px;
+    object-fit: cover;
+    display: block;
+}
+.medium-card {
+    grid-column: span 2;
+}
+
+/* Small Card */
+.small-card {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 87.61px;
+}
+.small-card-text {
+    align-self: stretch;
+    height: 175px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.small-card-divider {
+    width: 380px;
+    height: 1px;
+    border-top: 1px solid rgba(81,84,89,0.64);
+}
+.small-card-label {
+    width: 88.87px;
+    height: 5px;
+    color: black;
+    font-size: 6px;
+    font-family: 'SF Mono', monospace;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 15px;
+    letter-spacing: 0.60px;
+}
+.small-card-title {
+    color: black;
+    font-size: 21.56px;
+    font-family: 'New York Medium', serif;
+    font-weight: 600;
+    line-height: 26.40px;
+}
+.small-card-description {
+    width: 322px;
+    color: #313439;
+    font-size: 12.38px;
+    font-family: 'SF Mono', monospace;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 20px;
+}
+.small-card-image {
+    align-self: stretch;
+    height: 238px;
+    background: white;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.small-card-img-wrapper {
+    width: 380px;
+    height: 238px;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.small-card-img-inner {
+    flex: 1 1 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.small-card-img-inner img {
+    width: 380px;
+    height: 254px;
+}
+/* Override for small grid card to remove drop shadow & border radius */
+.small-grid-card {
+    width: 100%;
+    height: 504px;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+/* Large Card */
+.large-card {
+    width: 100%;
+    max-width: 60%;
+    margin: 0 auto 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    background: rgba(255,255,255,0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    align-items: center;
+}
+.large-card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.large-card-text h2 {
+    font-family: 'New York Medium', serif;
+    font-size: 24px;
+    color: black;
+}
+.large-card-text p {
+    font-family: 'SF Mono', monospace;
+    font-size: 14px;
+    color: #313439;
+}
+.large-card-text .card-button {
+    padding: 10px 20px;
+    font-family: 'SF Mono', monospace;
+    font-size: 14px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.large-card-media img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Footer */
+.footer-container {
+    width: 100%;
+    padding: 41px 340px;
+    background: black;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.10);
+    backdrop-filter: blur(60px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: 'SF Pro', sans-serif;
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 510;
+}
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+.footer-meta {
+    display: flex;
+    gap: 16px;
+    font-family: 'SF Mono', monospace;
+    font-size: 11px;
+    color: #919499;
+}
+.footer-icons {
+    display: flex;
+    gap: 24px;
+}
+.footer-icons .icon {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1); /* Makes the SVGs white */
+}

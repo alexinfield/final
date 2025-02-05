@@ -73,6 +73,7 @@ header {
     width: 100%;
     display: flex;
     justify-content: center;
+    height: 690px;
 }
 .hero-image img {
     width: 100%;
@@ -345,4 +346,129 @@ a:hover .card-title,
 
 .small-card:hover .small-card-title {
     color: hsl(34, 84%, 54%) !important;
+}
+
+/* Blog Text Section Styles */
+.blog-text-section {
+    width: 100%;
+    padding: 0 240px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0; /* optional spacing */
+}
+.blog-container {
+    /* Revert previous padding and reduce horizontal spacing */
+    padding: 0 320px;
+    background: white;
+    box-shadow: 0px 2px 3px rgba(0,0,0,0.10);
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 24px; /* overall container gap unchanged */
+}
+.blog-header {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* was 16px */
+}
+.starting-line {
+    color: black;
+    font-size: 12px;
+    font-family: 'SF Mono', monospace;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 12px;
+    letter-spacing: 0.24px;
+}
+.main-heading {
+    color: black;
+    font-size: 49.98px;
+    font-family: 'New York Medium', serif;
+    font-weight: 600;
+    line-height: 56px;
+}
+.subheading span {
+    color: black;
+    font-size: 12.25px;
+    font-family: 'SF Mono', monospace;
+    font-weight: 400;
+    line-height: 20px;
+}
+.subheading span:first-child {
+    font-style: italic;
+}
+.author-block {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.author-image {
+    width: 64px;
+    height: 44px;
+    padding-right: 20px;
+}
+.author-image img {
+    width: 44px;
+    height: 44px;
+}
+.author-info > div:first-child {
+    font-size: 11.59px;
+    font-family: 'SF Mono', monospace;
+    font-weight: 400;
+    line-height: 21px;
+}
+.home-button {
+    height: 26px;
+    padding: 9px 9px 9px 8px;
+    background: white;
+    border-radius: 4px;
+    border: 1px solid rgba(81,84,89,0.64);
+    display: inline-flex;
+    align-items: center;
+}
+.home-button span {
+    color: black;
+    font-size: 9.38px;
+    font-family: 'SF Mono', monospace;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 8px;
+    letter-spacing: 0.07px;
+}
+.blog-content {
+    padding: 0 0 12px 0; /* was 16px bottom padding */
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* was 16px */
+}
+.blog-content > div {
+    /* Remove extra padding on paragraphs */
+    padding: 0;
+    margin: 0;
+    font-size: 16.18px;
+    font-family: 'SF Mono', monospace;
+    font-weight: 500;
+    line-height: 28.50px;
+}
+
+main {
+    /* Temporary debug styling to ensure main is visible */
+    min-height: 100vh;
+    background: white;
+}
+
+/* Added blog-page hero section height rules */
+.blog-page .hero-section {
+    max-height: 690px;
+    overflow: hidden;
+}
+.blog-page .hero-image img {
+    max-height: 690px;
+    width: 100%;
+    object-fit: cover;
 }

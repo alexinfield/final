@@ -229,8 +229,11 @@ header {
     align-items: center;
 }
 .small-card-img-inner img {
-    width: 380px;
-    height: 254px;
+    width: auto; /* Changed from 380px */
+    height: 100%; /* Changed from 254px */
+    max-width: 100%; /* Added to ensure it doesn't overflow */
+    max-height: 100%; /* Added to ensure it doesn't overflow */
+    object-fit: contain; /* Added to maintain aspect ratio and fit within the container */
 }
 /* Override for small grid card to remove drop shadow & border radius */
 .small-grid-card {

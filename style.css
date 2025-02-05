@@ -458,7 +458,6 @@ a:hover .card-title,
 
 main {
     /* Temporary debug styling to ensure main is visible */
-    min-height: 100vh;
     background: white;
 }
 
@@ -471,4 +470,24 @@ main {
     max-height: 690px;
     width: 100%;
     object-fit: cover;
+}
+
+/* New styles for About page two-column layout */
+.about-section {
+    margin: 40px 0; /* Added equal top and bottom margin */
+    display: flex;
+    align-items: center;
+    padding: 40px 240px;
+    gap: 40px;
+}
+.about-image {
+    flex: 1;
+}
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.about-text {
+    flex: 1;
 }
